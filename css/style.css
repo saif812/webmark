@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+html, body {
+    font-family: 'Notable', sans-serif;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    word-spacing: normal;
+    letter-spacing: normal;
+    line-height: normal;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display:flex;
+    margin: 2rem auto 0 auto;
+    border-radius: 50%;
+}
+
+.header-title, .header-subtitle {
+    text-align: center;
+}
+
+/* Navbar PC/Table*/
+.navbar ul {
+    text-align: center;
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navbar li {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+.video {
+    width:400px;
+    display: flex;
+    margin: 3rem auto;
+}
+
+.article {
+    margin: 3rem auto;
+}
+
+.article-img {
+    width: 170px;
+    height: 170px;
+    float: right;
+    margin: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookie-box {
+    position: fixed;
+    z-index: 9999;
+    right: 1%;
+    bottom: 0;
+    color: #FFF;
+    background-color: #FA0;
+    padding: 5px;
+}
+
+.aside-home {
+    display: none;
+    float: right;
+    margin-right: 5%;
+}
+
+/* Hamburger Menu Start */
+.hamburger, .hamburger-items {
+    display: none;
+}
+
+.hamburger input {
+    display:none;
+}
+
+.hamburger input:checked ~ .hamburger-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger-items li a {
+    box-sizing: border-box;
+    display: block;
+    color: #FFF;
+}
+
+.hamburger label {
+    display: inline-block;
+    padding:10px;
+    order: 2;
+}
+
+.hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.hamburger ul {
+    list-style-type: none;
+    order: 1;
+    background-color: #333;
+    padding-left: 0;
+    padding: 15px;
+}
+
+.hamburger ul li {
+    margin: 8px 0;
+}
+/* Hamburger Menu End */
+
+
+/* Phone */
+@media only screen and (max-width: 480px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .video {
+        width: 300px;
+    }
+    .article {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .article-img {
+        float: none;
+        order: 2;
+        margin: 10px auto;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width:481px) and (max-width:1279px) {
+  .article-img {
+    float: left;
+  }
+}
+
+/* PC */
+@media only screen and (min-width: 1280px) {
+    .aside-home {
+        display: block;
+    }
+    .article {
+        width: 600px;
+    }
+}

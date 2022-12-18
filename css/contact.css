@@ -1,0 +1,45 @@
+form {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+form fieldset {
+    display:flex;
+    flex-direction: column;
+}
+
+form fieldset label {
+    margin-top: 1rem;
+}
+
+.aside {
+    display:flex;
+    flex-direction: column;
+}
+
+.aside-img {
+    width: 100px;
+    height: 100px;
+    margin:10px;
+}
+
+.aside-mobile {
+    display: none;
+}
+
+/* Phone */
+@media only screen and (max-width: 480px) {
+    .aside {
+        display: none;
+    }
+    
+    .aside-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+}
